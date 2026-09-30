@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iglú M&amp;T — ¿Y si tu próxima campaña se pudiera jugar?</title>
+<meta name="description" content="Convertimos objetivos de comunicación en experiencias jugables: videojuegos y dinámicas hechas a la medida de tu campaña, tu activación o tu evento." />
+<link rel="icon" href="assets/favicon_iglu_transparente.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<div class="progress-bar"></div>
+<div class="cursor-glow"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="assets/Logo Iglú M&amp;T_Mesa de trabajo 1.png" alt="Iglú M&amp;T" />
+    </a>
+    <nav class="nav-links">
+      <a href="#que-hacemos">Qué hacemos</a>
+      <a href="#journey">Cómo trabajamos</a>
+      <a href="#casos">Casos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contacto" class="btn btn-outline">Hablemos</a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="assets/new-hero.png" alt="Tu marca en la cima del iceberg" />
+  </div>
+  <div class="container hero-content">
+    <div class="hero-badge" data-reveal="zoom">
+      <span class="dot"></span> Gamificación para marcas y agencias
+    </div>
+    <h1 data-reveal>¿Y si tu próxima campaña se pudiera <span class="gradient-text">jugar</span>?</h1>
+    <p data-reveal>Convertimos objetivos de comunicación en experiencias jugables: videojuegos y dinámicas hechas a la medida de tu campaña, tu activación o tu evento.</p>
+    <div class="hero-ctas" data-reveal>
+      <a href="#contacto" class="btn btn-primary">Quiero ver qué podemos crear <span class="icon">→</span></a>
+      <a href="#que-hacemos" class="btn btn-outline">Ver qué hacemos</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">Lanzamientos</span>
+    <span class="marquee-item">Activaciones</span>
+    <span class="marquee-item">Eventos</span>
+    <span class="marquee-item">Puntos de venta</span>
+    <span class="marquee-item">Campañas digitales</span>
+    <span class="marquee-item">Phygital</span>
+    <span class="marquee-item">Ferias</span>
+    <span class="marquee-item">Gamificación</span>
+  </div>
+</div>
+
+<!-- ================= BANNER IMPORTANCIA ================= -->
+<section class="section banner">
+  <div class="bg-orbs"><div class="orb orb-blue"></div><div class="orb orb-pink"></div></div>
+  <div class="container banner-wrap" style="position:relative; z-index:1;">
+    <div class="banner-text" data-reveal="left">
+      <p class="banner-line"><strong>Una campaña consigue impresiones.</strong> Una experiencia consigue participantes.</p>
+      <p class="banner-line"><strong>Un anuncio pide atención.</strong> Un juego la gana.</p>
+    </div>
+
+    <div class="banner-game" data-reveal="right">
+      <div class="game-card">
+        <div class="game-card-head">
+          <span class="game-dot"></span> Pruébalo tú mismo
+        </div>
+        <canvas id="pong" width="400" height="260" aria-label="Mini juego de Pong"></canvas>
+        <div class="game-score">
+          <span>Tú <strong id="pong-score-player">0</strong></span>
+          <span>Iglú <strong id="pong-score-ai">0</strong></span>
+        </div>
+        <p class="game-hint">Mueve el mouse (o el dedo) sobre el juego para controlar tu barra</p>
+      </div>
+    </div>
+
+    <p class="banner-highlight gradient-text text-center" data-reveal="zoom">No diseñamos juegos para llenar tiempo.<br />Diseñamos experiencias para cumplir objetivos.</p>
+  </div>
+</section>
+
+<!-- ================= CUÉNTANOS QUÉ TIENES ================= -->
+<section class="section" id="que-hacemos">
+  <div class="noise-grid"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="eyebrow" data-reveal>Cómo empezamos</span>
+    <h2 class="section-title" data-reveal>Cuéntanos qué tienes.<br />Te decimos cómo jugarlo.</h2>
+
+    <div class="tell-grid" data-reveal-children>
+      <div class="tell-card">
+        <p class="q">¿Tienes un lanzamiento?</p>
+        <p class="a"><span class="arrow">→</span> Hagamos que el producto sea parte del juego.</p>
+      </div>
+      <div class="tell-card">
+        <p class="q">¿Tienes una activación?</p>
+        <p class="a"><span class="arrow">→</span> Hagamos que acercarse sea el primer reto.</p>
+      </div>
+      <div class="tell-card">
+        <p class="q">¿Tienes un evento?</p>
+        <p class="a"><span class="arrow">→</span> Hagamos que asistir también sea participar.</p>
+      </div>
+      <div class="tell-card">
+        <p class="q">¿Tienes una promoción?</p>
+        <p class="a"><span class="arrow">→</span> Hagamos que conseguir el beneficio sea parte de la experiencia.</p>
+      </div>
+      <div class="tell-card highlight">
+        <p class="q">¿Tienes una idea que todavía no sabes cómo ejecutar?</p>
+        <p class="a"><span class="arrow">→</span> Ahí es donde entramos nosotros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUÉ PODEMOS HACER CON TU MARCA ================= -->
+<section class="section" style="background: var(--bg-navy);">
+  <div class="bg-orbs"><div class="orb orb-purple"></div></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="eyebrow" data-reveal>Capacidades</span>
+    <h2 class="section-title" data-reveal>¿Qué podemos hacer <span class="gradient-text">con tu marca?</span></h2>
+
+    <div class="feature-grid" data-reveal-children>
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <h3>Hacerla jugable</h3>
+        <p>Videojuegos y minijuegos creados alrededor de tu producto, campaña o concepto.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <h3>Hacerla participable</h3>
+        <p>Mecánicas que convierten una activación en una experiencia donde las personas hacen, compiten y deciden.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <h3>Hacerla competible</h3>
+        <p>Rankings, retos y dinámicas diseñadas para multiplicar la participación.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04</div>
+        <h3>Hacerla conectable</h3>
+        <p>Experiencias que viven en eventos, web, móvil, redes o puntos físicos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="section" id="journey">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block; text-align:center;" data-reveal>Nuestro proceso</span>
+    <h2 class="section-title text-center" data-reveal>Así se construye un juego con propósito</h2>
+
+    <div class="journey-tags" data-reveal>
+      <span>Objetivo</span><span class="arrow-tag">→</span>
+      <span>Mecánica</span><span class="arrow-tag">→</span>
+      <span>Experiencia</span><span class="arrow-tag">→</span>
+      <span>Resultado</span>
+    </div>
+
+    <div class="journey-steps" data-reveal-children>
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Objetivo</h3>
+        <p>Nos cuentas qué necesita lograr tu campaña.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Mecánica</h3>
+        <p>Diseñamos la dinámica de juego que mejor conecta ese objetivo con tu audiencia.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Experiencia</h3>
+        <p>Construimos y probamos la experiencia hasta que esté lista para el público real.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Resultado</h3>
+        <p>La activas y medimos participación, alcance y datos de quienes jugaron.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JUGAR TAMBIÉN DEJA DATOS ================= -->
+<section class="section data-section">
+  <div class="container">
+    <div class="data-wrap">
+      <div data-reveal="left">
+        <span class="eyebrow">Data &amp; Insights</span>
+        <h2 class="section-title">Jugar también deja datos</h2>
+        <p class="section-sub">Porque no todo lo importante ocurre durante la partida.</p>
+        <ul class="data-list">
+          <li><span class="icon">◆</span> Quién jugó.</li>
+          <li><span class="icon">◆</span> Qué eligió.</li>
+          <li><span class="icon">◆</span> Cuánto participó.</li>
+          <li><span class="icon">◆</span> Qué resultado obtuvo.</li>
+          <li><span class="icon">◆</span> Qué información dejó.</li>
+        </ul>
+        <p class="data-tagline">La diversión sucede en pantalla. <strong>Los insights quedan en tus manos.</strong></p>
+      </div>
+      <div class="data-visual" data-reveal="right">
+        <img class="visual-gif" src="assets/Casos de Éxito/Gif Indrive.gif" alt="Videojuego InDrive — caso de éxito Iglú M&T" loading="lazy" />
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="core">100%<br />Jugable<br />100%<br />Medible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUDIENCE ================= -->
+<section class="section audience">
+  <div class="container">
+    <div class="audience-tags" data-reveal="zoom">
+      <span>Para marcas.</span>
+      <span>Para agencias.</span>
+      <span>Para quienes quieren hacer algo diferente.</span>
+    </div>
+    <p data-reveal>Si tienes una marca, una campaña, un evento o una idea que necesita una capa de tecnología y experiencia, podemos construirla contigo.</p>
+  </div>
+</section>
+
+<!-- ================= CASOS REALES ================= -->
+<section class="section" id="casos" style="background: var(--bg-navy);">
+  <div class="container">
+    <span class="eyebrow" data-reveal>Portafolio</span>
+    <h2 class="section-title" data-reveal>Casos reales</h2>
+    <p class="section-sub" data-reveal>Juegos y dinámicas que ya jugamos con marcas reales.</p>
+
+    <div class="cases-grid" data-reveal-children>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/Gif Indrive.gif" alt="Caso real Iglú M&T — InDrive" loading="lazy" />
+        <div class="case-overlay"><span>InDrive</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/FLAPPY GAME2.gif" alt="Caso real Iglú M&T — Flappy Game" loading="lazy" />
+        <div class="case-overlay"><span>Flappy Game</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/FUT-CABEZONES2.gif" alt="Caso real Iglú M&T — FUT Cabezones" loading="lazy" />
+        <div class="case-overlay"><span>FUT Cabezones</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/FUT-TAB2.gif" alt="Caso real Iglú M&T — FUT TAB" loading="lazy" />
+        <div class="case-overlay"><span>FUT TAB</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/JBL DJ2.gif" alt="Caso real Iglú M&T — JBL DJ" loading="lazy" />
+        <div class="case-overlay"><span>JBL DJ</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/JUMPY JUMP2.gif" alt="Caso real Iglú M&T — Jumpy Jump" loading="lazy" />
+        <div class="case-overlay"><span>Jumpy Jump</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/PENGUIN IGLÚ GAME2.gif" alt="Caso real Iglú M&T — Penguin Iglú Game" loading="lazy" />
+        <div class="case-overlay"><span>Penguin Iglú Game</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/RAPID REPEL2.gif" alt="Caso real Iglú M&T — Rapid Repel" loading="lazy" />
+        <div class="case-overlay"><span>Rapid Repel</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/SHEEPS AND DESTROY2.gif" alt="Caso real Iglú M&T — Sheeps and Destroy" loading="lazy" />
+        <div class="case-overlay"><span>Sheeps and Destroy</span></div>
+      </div>
+      <div class="case-card">
+        <img src="assets/Casos de Éxito/STARLINK2.gif" alt="Caso real Iglú M&T — Starlink" loading="lazy" />
+        <div class="case-overlay"><span>Starlink</span></div>
+      </div>
+    </div>
+
+    <div class="cases-videos-head" data-reveal>
+      <span class="eyebrow">Los más recientes</span>
+      <h3 class="cases-videos-title">Casos en video</h3>
+    </div>
+
+    <div class="cases-videos-grid" data-reveal-children>
+      <a class="video-card" href="https://youtube.com/shorts/ZBNtn_ldR6o" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/ZBNtn_ldR6o/hqdefault.jpg" alt="Caso de éxito InDrive" loading="lazy" />
+        <div class="video-play">▶</div>
+        <div class="video-label">InDrive</div>
+      </a>
+      <a class="video-card" href="https://youtube.com/shorts/t_iTxVqdghY" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/t_iTxVqdghY/hqdefault.jpg" alt="Caso de éxito La Muñeca" loading="lazy" />
+        <div class="video-play">▶</div>
+        <div class="video-label">La Muñeca</div>
+      </a>
+      <a class="video-card" href="https://youtube.com/shorts/5lrbkHVPlVw" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/5lrbkHVPlVw/hqdefault.jpg" alt="Caso de éxito Starlink" loading="lazy" />
+        <div class="video-play">▶</div>
+        <div class="video-label">Starlink</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block; text-align:center;" data-reveal>Preguntas frecuentes</span>
+    <h2 class="section-title text-center" data-reveal>FAQ</h2>
+
+    <div class="faq-list" data-reveal>
+      <div class="faq-item active">
+        <button class="faq-question">¿Cuánto tiempo toma desarrollar una experiencia? <span class="plus"></span></button>
+        <div class="faq-answer"><p>Depende de la complejidad, pero trabajamos con tiempos ajustados a campañas y activaciones con fecha definida.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Necesito tener el concepto de mi campaña resuelto? <span class="plus"></span></button>
+        <div class="faq-answer"><p>No. Podemos partir solo de tu objetivo y tu marca; el concepto y la mecánica los construimos con ustedes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Funciona para eventos presenciales y digitales? <span class="plus"></span></button>
+        <div class="faq-answer"><p>Sí. Diseñamos experiencias para pantallas en stands, redes sociales, web o apps.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Puedo usarlo para recolectar datos de usuarios? <span class="plus"></span></button>
+        <div class="faq-answer"><p>Sí, cada experiencia puede integrarse con formularios y captura de datos para tu base comercial o de CRM.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA / FORM ================= -->
+<section class="section final" id="contacto">
+  <div class="bg-orbs"><div class="orb orb-blue"></div><div class="orb orb-pink"></div></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <div class="final-wrap">
+      <div data-reveal="left">
+        <span class="eyebrow">Empecemos</span>
+        <h2 class="final-title">Tu objetivo.<br /><span class="gradient-text">Nuestro juego.</span></h2>
+        <p class="final-sub">Cuéntanos qué quieres lograr y te mostramos cómo se vería tu marca convertida en experiencia.</p>
+        <ul class="final-points">
+          <li><span class="check">✓</span> Respuesta ágil y propuesta a la medida</li>
+          <li><span class="check">✓</span> Experiencias medibles con datos reales</li>
+          <li><span class="check">✓</span> Para marcas, agencias y eventos</li>
+        </ul>
+      </div>
+
+      <div class="form-card" data-reveal="right">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cargo">Cargo</label>
+              <input type="text" id="cargo" name="cargo" />
+            </div>
+            <div class="field">
+              <label for="email">Email corporativo</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="tipo">¿Qué tipo de proyecto tienes?</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecciona una opción</option>
+              <option>Lanzamiento</option>
+              <option>Activación</option>
+              <option>Evento</option>
+              <option>Promoción</option>
+              <option>Campaña digital</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">Cuéntanos brevemente qué quieres lograr</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar <span class="icon">→</span></button>
+            <a href="https://wa.me/000000000000" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+          </div>
+          <p class="microcopy">Te contactamos en menos de 24 horas hábiles</p>
+        </form>
+        <div class="form-success">
+          <div class="check-big">✓</div>
+          <h3>¡Listo!</h3>
+          <p class="microcopy">Recibimos tu mensaje. Te contactamos en menos de 24 horas hábiles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-logo"><img src="assets/Logo Iglú M&amp;T_Mesa de trabajo 1.png" alt="Iglú M&amp;T" /></div>
+    <p>Convertimos objetivos de comunicación en experiencias jugables.</p>
+    <div class="footer-socials">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="https://wa.me/000000000000" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+    </div>
+    <p>&copy; 2026 Iglú M&amp;T. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
