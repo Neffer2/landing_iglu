@@ -1022,9 +1022,34 @@ h4 {
 
 .cases-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
   gap: 2rem;
   margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  .cases-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .cases-grid .case-card {
+    aspect-ratio: auto;
+    border-radius: 16px;
+    background: #050225;
+  }
+
+  .cases-grid .case-card img {
+    object-fit: contain;
+    display: block;
+  }
+
+  .cases-grid .case-overlay {
+    opacity: 1;
+    padding: 0.9rem;
+    background: linear-gradient(0deg, rgba(5, 2, 37, 0.8), transparent 45%);
+  }
 }
 
 .case-card {
@@ -1033,6 +1058,38 @@ h4 {
   overflow: hidden;
   aspect-ratio: 16/11;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.case-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.case-modal.open { display: flex; }
+
+.case-modal img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.case-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -1112,9 +1169,21 @@ h4 {
 
 .cases-videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 1.6rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .cases-videos-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .cases-videos-grid .video-card {
+    width: 100%;
+    max-width: 236px;
+  }
 }
 
 .video-card {

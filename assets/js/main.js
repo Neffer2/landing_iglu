@@ -90,10 +90,58 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------- Contact form ---------------- */
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    const EMAIL = 'neffer.barragan@iglumarketingdigital.com';
+    const WA_NUMBER = '573160171942';
+
+    const buildMessage = () => {
+      const v = (id) => (form.elements[id] ? form.elements[id].value.trim() : '');
+      return [
+        'Hola Iglú, quiero cotizar un proyecto.',
+        `Nombre: ${v('nombre')}`,
+        `Empresa: ${v('empresa')}`,
+        `Cargo: ${v('cargo')}`,
+        `Email: ${v('email')}`,
+        `Tipo de proyecto: ${v('tipo')}`,
+        `Objetivo: ${v('mensaje')}`,
+      ].join('\n');
+    };
+
+    const waBtn = form.querySelector('.btn-whatsapp');
+    if (waBtn) {
+      waBtn.addEventListener('click', () => {
+        waBtn.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildMessage())}`;
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      form.style.display = 'none';
-      document.querySelector('.form-success').classList.add('show');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+
+      const data = new FormData(form);
+      data.append('_subject', 'Nuevo lead - Landing Iglú M&T');
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+
+      let sent = false;
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: data,
+        });
+        sent = res.ok;
+      } catch (err) {
+        sent = false;
+      }
+
+      if (sent) {
+        form.style.display = 'none';
+        document.querySelector('.form-success').classList.add('show');
+      } else {
+        submitBtn.disabled = false;
+        window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildMessage())}`, '_blank', 'noopener');
+      }
     });
   }
 
@@ -250,4 +298,34 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     gameObserver.observe(canvas);
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('caseModal');
+  const modalImg = document.getElementById('caseModalImg');
+  if (!modal) return;
+
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    modalImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.cases-grid .case-card img').forEach((img) => {
+    img.closest('.case-card').addEventListener('click', () => {
+      modalImg.src = img.currentSrc || img.src;
+      modalImg.alt = img.alt;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target !== modalImg) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
 });
